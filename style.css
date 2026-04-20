@@ -18,3 +18,37 @@ button {
 button:hover {
   background: red;
 }
+/* Menüyü yan yana getir */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #333;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    color: aqua;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+/* Proje kartlarını kutu haline getir */
+.project-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px;
+}
+
+.project-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}

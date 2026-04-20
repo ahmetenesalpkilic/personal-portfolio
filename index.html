@@ -11,14 +11,27 @@
 </head>
 <body>
 
-  <h1>Benim Portfolyom</h1>
+ <nav>
+    <div class="logo">Portfolyom</div>
+    <ul>
+        <li><a href="#home">Ana Sayfa</a></li>
+        <li><a href="#projects">Projelerim</a></li>
+        <li><a href="#contact">İletişim</a></li>
+    </ul>
+</nav>
 
-  <p>Frontend Ogreniyoruz 🚀</p>
+<header id="home">
+    <h1>Selam, Ben [Adın] 👋</h1>
+    <p>Bilgisayar Mühendisliği öğrencisiyim ve Frontend geliştiriyorum.</p>
+    <button onclick="tikla()">Bana Tıkla</button>
+</header>
 
-  <button onclick="tikla()">Bana Tıkla</button>
-
-  <script src="script.js"></script>
-
-
+<section id="projects">
+    <h2>Projelerim</h2>
+    <div class="project-container">
+        <div class="project-card">Proje 1</div>
+        <div class="project-card">Proje 2</div>
+    </div>
+</section>
 </body>
 </html>
