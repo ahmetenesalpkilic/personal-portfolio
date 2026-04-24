@@ -184,3 +184,45 @@ footer {
 .social-links a:hover {
     color: white;
 }
+/*  Referans kısmı*/
+.references-section {
+    padding: 80px 20px;
+    background-color: #f8f9fa; /* Diğer bölümlerden ayrılması için çok hafif gri */
+    text-align: center;
+}
+
+.references-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.reference-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    width: 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    position: relative;
+    border-top: 4px solid #4ca1af; /* Proje renginle uyumlu bir çizgi */
+}
+
+.reference-card p {
+    font-style: italic;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.ref-info h4 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 1.1rem;
+}
+
+.ref-info span {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+}
