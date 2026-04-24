@@ -37,6 +37,12 @@ nav ul li {
     margin-left: 20px;
 }
 
+nav ul li a {
+    color: white;          /* Linkin rengini beyaz yapar (veya istediğin bir renk: #ff0000 gibi) */
+    text-decoration: none; /* O meşhur mavi alt çizgiyi kaldırır */
+    font-weight: 500;      /* Yazıyı biraz daha dolgun gösterir */
+}
+
 /* Proje kartlarını kutu haline getir */
 .project-container {
     display: flex;
