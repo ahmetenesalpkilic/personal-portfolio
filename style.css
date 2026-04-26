@@ -226,3 +226,27 @@ footer {
     font-size: 0.85rem;
     color: #7f8c8d;
 }
+/*Referans butonları için css*/
+/* Referans kartının içini dikeyde hizalamak için düzenleme */
+.reference-card .ref-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ref-link {
+    margin-top: 15px;
+    font-size: 0.8rem;
+    color: #4ca1af;
+    text-decoration: none;
+    border: 1px solid #4ca1af;
+    padding: 5px 15px;
+    border-radius: 20px; /* Oval, modern bir görünüm */
+    transition: all 0.3s ease;
+}
+
+.ref-link:hover {
+    background: #4ca1af;
+    color: white;
+    box-shadow: 0 3px 8px rgba(76, 161, 175, 0.3);
+}
