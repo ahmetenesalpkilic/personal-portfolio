@@ -1,11 +1,9 @@
 body {
-  text-align: center;
-  font-family: Arial;
-  background: #f2f2f2;
+    font-family: 'Inter', sans-serif; /* Daha modern bir font */
+    background-color: #f4f7f6;
 }
-
 h1 {
-  color: navy;
+  color: rgb(255, 255, 255);
 }
 
 button {
@@ -21,33 +19,48 @@ button:hover {
 /* Menüyü yan yana getir */
 nav {
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background: #38769c;
+    justify-content: center; /* Menü öğesini ortala */
+    align-items: center;
+    background-color: #2c3e50; /* Koyu, vakur bir mavi-gri */
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+/* Logo - O çirkin border'dan kurtulduk */
+.logo {
+    position: absolute;
+    left: 30px;
     color: white;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    /* Border yok, sadece temiz bir yazı */
 }
 
 nav ul {
     display: flex;
+    justify-content: center;
     list-style: none;
-    color: aqua;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin: 0 18px;
 }
 
 nav ul li a {
-    color: white;          /* Linkin rengini beyaz yapar (veya istediğin bir renk: #ff0000 gibi) */
-    text-decoration: none; /* O meşhur mavi alt çizgiyi kaldırır */
-    font-weight: 500;      /* Yazıyı biraz daha dolgun gösterir */
+    color: #bdc3c7;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ffffff;        /* Fareyle üzerine gelince sarı olsun */
-    text-shadow: 0px 0px 5px rgba(241, 240, 240, 0.789); /* Hafif bir parlama efekti */
+    color: #4ca1af; /* Üzerine gelince senin turkuaz rengin parlasın */
 }
-
 /* Proje kartlarını kutu haline getir */
 .project-container {
     display: flex;
@@ -193,10 +206,12 @@ footer {
 
 .references-container {
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 40px;
+    justify-content: center; /* Kartları ortalar */
+    gap: 20px;               /* Kartlar arası boşluk */
+    flex-wrap: wrap;         /* KRİTİK: Alan yetmezse kartları bir alt satıra atar */
+    width: 100%;             /* Konteynırın ekranı aşmasını engeller */
+    max-width: 1200px;       /* Çok geniş ekranlarda devasa yayılmasın diye */
+    margin: 0 auto;          /* Bölümü sayfada ortalar */
 }
 
 .reference-card {
@@ -249,4 +264,35 @@ footer {
     background: #4ca1af;
     color: white;
     box-shadow: 0 3px 8px rgba(76, 161, 175, 0.3);
+}
+/* Mobil Ayarları (Breakpoint) */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Logo ve menü alt alta gelsin */
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Menü elemanları alt alta dizilsin */
+        align-items: center;
+        padding: 0;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 8px 0; /* Elemanlar arasına dikey boşluk */
+    }
+
+    .hero h1 {
+        font-size: 1.8rem; /* Mobilde başlık çok büyük kalmasın */
+    }
+
+    .projects-container, .references-container {
+        flex-direction: column; /* Kartlar yan yana sığmayacağı için alt alta gelsin */
+        align-items: center;
+    }
+
+    .project-card, .reference-card {
+        width: 90%; /* Kartlar ekranın çoğunu kaplasın */
+    }
 }
