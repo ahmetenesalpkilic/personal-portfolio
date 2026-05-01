@@ -7,16 +7,16 @@ document.addEventListener('DOMContentLoaded', function() {
   const referenceCards = document.querySelectorAll('.reference-card');
   
   referenceCards.forEach(card => {
-    card.addEventListener('mouseenter', function() {
+    card.addEventListener('mouseenter', () => {
       // Diğer tüm kartlara 'faded' sınıfı ekle
       referenceCards.forEach(otherCard => {
-        if (otherCard !== this) {
+        if (otherCard !== card) {
           otherCard.classList.add('faded');
         }
       });
     });
     
-    card.addEventListener('mouseleave', function() {
+    card.addEventListener('mouseleave', () => {
       // Tüm kartlardan 'faded' sınıfını kaldır
       referenceCards.forEach(otherCard => {
         otherCard.classList.remove('faded');
