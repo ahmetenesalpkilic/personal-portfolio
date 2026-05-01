@@ -241,6 +241,18 @@ footer {
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     position: relative;
     border-top: 4px solid #4ca1af; /* Proje renginle uyumlu bir çizgi */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.reference-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 40px rgba(76, 161, 175, 0.3);
+}
+
+.reference-card.faded {
+    opacity: 0.5;
 }
 
 .reference-card p {
