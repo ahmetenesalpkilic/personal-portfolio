@@ -301,13 +301,21 @@ footer {
     nav {
         flex-direction: column; /* Logo ve menü alt alta gelsin */
         padding: 15px;
+        align-items: center;
+    }
+
+    .logo {
+        position: relative; /* Absolute'ten kurtul */
+        left: 0;
+        margin-bottom: 10px;
+        font-size: 1.2rem; /* Mobilde biraz daha küçük */
     }
 
     nav ul {
         flex-direction: column; /* Menü elemanları alt alta dizilsin */
         align-items: center;
         padding: 0;
-        margin-top: 10px;
+        margin-top: 0;
     }
 
     nav ul li {
