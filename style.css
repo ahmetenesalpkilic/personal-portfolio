@@ -129,7 +129,7 @@ button:hover {
 
 .hero {
     min-height: 100vh; /* Tam ilk ekran yüksekliği */
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -137,6 +137,46 @@ button:hover {
     background: linear-gradient(135deg, #2c3e50 20%, #4ca1af 100%); /* Şık bir geçiş, koyu ton daha baskın */
     color: white;
     text-align: center;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.spiral-wrapper {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    width: 360px;
+    height: 360px;
+    transform: translateY(-50%) rotate(var(--spiral-rotate, 0deg));
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero h1,
+.hero p,
+.hero button {
+    position: relative;
+    z-index: 2;
+}
+
+.spiral {
+    width: 100%;
+    height: 100%;
+    display: block;
+    filter: drop-shadow(0 0 18px rgba(0,0,0,0.32));
+}
+
+.spiral path {
+    stroke: rgba(255,255,255,0.95);
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 .hero p {

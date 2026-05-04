@@ -2,13 +2,26 @@ function tikla() {
   alert("Butona basıldı!");
 }
 
-// Referans kartlarına hover efekti ekle
+// Spiral döndürme animasyonu
 document.addEventListener('DOMContentLoaded', function() {
+  const spiral = document.querySelector('.spiral-wrapper');
+  if (spiral) {
+    const rotateSpiral = () => {
+      const rotate = window.scrollY * 0.15;
+      spiral.style.setProperty('--spiral-rotate', `${rotate}deg`);
+    };
+
+    rotateSpiral();
+    window.addEventListener('scroll', () => {
+      window.requestAnimationFrame(rotateSpiral);
+    });
+  }
+
+  // Referans kartlarına hover efekti ekle
   const referenceCards = document.querySelectorAll('.reference-card');
   
   referenceCards.forEach(card => {
     card.addEventListener('mouseenter', () => {
-      // Diğer tüm kartlara 'faded' sınıfı ekle
       referenceCards.forEach(otherCard => {
         if (otherCard !== card) {
           otherCard.classList.add('faded');
@@ -17,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     card.addEventListener('mouseleave', () => {
-      // Tüm kartlardan 'faded' sınıfını kaldır
       referenceCards.forEach(otherCard => {
         otherCard.classList.remove('faded');
       });
