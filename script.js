@@ -2,13 +2,16 @@ function tikla() {
   alert("Butona basıldı!");
 }
 
-// Spiral döndürme animasyonu
+// Spiral döndürme ve ölçekleme animasyonu
 document.addEventListener('DOMContentLoaded', function() {
   const spiral = document.querySelector('.spiral-wrapper');
   if (spiral) {
     const rotateSpiral = () => {
-      const rotate = window.scrollY * 0.15;
+      const scrollY = window.scrollY;
+      const rotate = scrollY * 0.15;
+      const scale = Math.max(0.3, 1 - scrollY * 0.0005);
       spiral.style.setProperty('--spiral-rotate', `${rotate}deg`);
+      spiral.style.transform = `translateY(-50%) rotate(${rotate}deg) scale(${scale})`;
     };
 
     rotateSpiral();
