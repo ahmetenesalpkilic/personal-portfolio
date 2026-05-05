@@ -88,7 +88,7 @@ nav ul li a:hover {
 
 .projects-section {
     padding: 60px 20px;
-    background: linear-gradient(135deg, rgba(44, 62, 80, 0.95), rgba(76, 161, 175, 0.95));
+    background: linear-gradient(180deg,#4ca1af,#2c3e50);
     text-align: center;
     color: white;
 }
@@ -146,7 +146,7 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #2c3e50 20%, #4ca1af 100%); /* Şık bir geçiş, koyu ton daha baskın */
+    background: linear-gradient(180deg, #2c3e50 10%, #4ca1af 100%); /* Şık bir geçiş, koyu ton daha baskın */
     color: white;
     text-align: center;
 }
@@ -275,7 +275,7 @@ footer {
     color: white;
     padding: 40px 20px;
     text-align: center;
-    margin-top: 50px;
+    
 }
 
 .footer-content p {
@@ -303,7 +303,7 @@ footer {
 .references-section {
     z-index: 999;
     padding: 80px 20px;
-    background: linear-gradient(180deg, rgba(44,62,80,0.95), rgba(27,40,50,0.95));
+    background: linear-gradient(180deg, #2c3e50, rgba(27,40,50,0.95));
     text-align: center;
     color: white;
     position: relative;
